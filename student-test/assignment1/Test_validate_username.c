@@ -14,9 +14,32 @@
 */
 void test_validate_my_username()
 {
+    
+
+  // Call the my_username() function in autotest-validate.c to get your hard-coded username.
+    
+    const char* expected_username = my_username();
+
+  // Obtain the value returned from function malloc_username_from_conf_file() in username-from-conf-file.h within the assignment autotest submodule.
+    
+    const char* actual_username = malloc_username_from_conf_file();
+
+  // Use unity assertion TEST_ASSERT_EQUAL_STRING_MESSAGE to verify the two strings are equal.
+    
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_username, actual_username, "Username validation failed!");
+
+  // Free the memory allocated by malloc_username_from_conf_file()
+    
+    free((void*)actual_username);
+
+
+    
+    
+    
+    
     /**
      * TODO: Replace the line below with your code here as described above to verify your /conf/username.txt 
      * config file and my_username() functions are setup properly
-     */
-    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");
+     
+    TEST_ASSERT_TRUE_MESSAGE(false,"AESD students, please fix me!");*/
 }
